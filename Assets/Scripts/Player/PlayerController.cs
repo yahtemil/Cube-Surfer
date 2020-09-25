@@ -52,22 +52,22 @@ public class PlayerController : MonoBehaviour
         }
         //_rb.velocity = Vector3.forward * 2f;
 
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
-#else
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
-#endif
+//#else
+//            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+//#endif
         {
             callStart = true;
             _startPoint.x = Input.mousePosition.x;
             _startPoint.y = Input.mousePosition.y;
         }
 
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
         if (Input.GetMouseButtonUp(0))
-#else
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-#endif
+//#else
+//            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+//#endif
         {
             callStart = false;
         }
